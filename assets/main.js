@@ -1,0 +1,6 @@
+(function(){
+  const toggle=document.getElementById('navToggle'), menu=document.getElementById('mobileMenu');
+  if(toggle&&menu){toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu')});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu')}));}
+  const form=document.getElementById('inquiryForm');
+  if(form){form.addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('fName')?.value.trim()||'';const phone=document.getElementById('fPhone')?.value.trim()||'';const service=document.getElementById('fService')?.value||'Other';const message=document.getElementById('fMessage')?.value.trim()||'';if(!name||!phone){form.reportValidity();return;}const text=`Hello AMACO Enterprises,\n\nI would like to discuss a requirement.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nRequirement: ${message||'Not specified'}\n\nPlease let me know the next steps.`;window.open('https://wa.me/916260350804?text='+encodeURIComponent(text),'_blank','noopener');});}
+})();
