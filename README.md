@@ -6,16 +6,18 @@ A static, mobile-first website for AMACO Enterprises (Jabalpur, Madhya Pradesh).
 
 ```text
 AMACO-Website/
+│
 ├── index.html
 ├── contact.html
 ├── contact.vcf
-├── assets/
-│   ├── style.css
-│   ├── main.js
-│   ├── logo_full.png
-│   ├── logo_mark_tight.png
-│   └── favicon-32/192/512.png
-└── README.md
+├── README.md
+│
+└── assets/
+    ├── style.css
+    ├── main.js
+    ├── logo_full.png
+    ├── logo_mark_tight.png
+    └── favicon files...
 ```
 
 ## Deploying
